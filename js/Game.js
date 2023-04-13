@@ -218,7 +218,7 @@ handlePlayerControls() {
 
 }
 
-this.handlePlayerControls(); const finishLine = height 6 - 100;
+this.handlePlayerControls(); const finishLine = height * 6 - 100;
 
 if (player.positiony > finishLine) {
 
