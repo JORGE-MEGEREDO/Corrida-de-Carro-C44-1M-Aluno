@@ -214,20 +214,55 @@ showLeaderboard() {
 }
 
 handlePlayerControls() {
-  if (keyIsDown(UP_ARROW)) {
-    player.positionY += 10;
-    player.update();
-  }
+  if (keyIsDown (UP_ARROW)) { player.positionY += 10; player.update();
+
+}
+
+this.handlePlayerControls(); const finishLine = height 6 - 100;
+
+if (player.positiony > finishLine) {
+
+gameState = 2;
+
+player.rank+= 1;
+
+Player.updateCarsAtEnd(player.rank);
+
+player.update();
+
+this.showRank();
+
+drawSprites();
+
+}
 
   if (keyIsDown(LEFT_ARROW) && player.positionX > width / 3 - 50) {
     player.positionX -= 5;
     player.update();
   }
 
-  if (keyIsDown(RIGHT_ARROW) && player.positionX < width / 2 + 300) {
-    player.positionX += 5;
-    player.update();
-  }
+ if (keyIsDown (RIGHT_ARROW) && player.positionX < width / 2+ 300) {
+
+player.positionX += 5;
+
+player.update();
+
+}
+
+showRank() {
+
+swal({
+
+title: "Incrível!$("\n")Ranks("\n"}${player.rank}", text: "Você alcançou a linha de chegada com sucesso",
+
+imageUrl:
+
+"https://raw.githubusercontent.com/vishalgaddam873/p5-multiplayer-car-race-game/master/assets/cup.png", imageSize: "100x100",
+
+confirmButtonText: "Ok"
+
+});
+
 }
 // CRIE A FUNÇÃO showRank PARA EXIBIR O POPUP
   
