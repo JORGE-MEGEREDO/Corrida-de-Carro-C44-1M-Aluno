@@ -231,9 +231,9 @@ Player.updateCarsAtEnd(player.rank);
 player.update();
 
 this.showRank();
-
+}
 drawSprites();
-
+ }
 }
 
   if (keyIsDown(LEFT_ARROW) && player.positionX > width / 3 - 50) {
